@@ -1,0 +1,22 @@
+Question: 
+The read_hw function from 4.1.3 page 57 checked the stream from which it read to determine whether the function had hit end-of-file or encountered an invalid input.  Our Str input operator
+does no such check.  Why?  Will it leave the stream in an invalid state?
+
+Answer:
+There are a few reasons why Str.h handles the input operator overload the way it does.  But to answer the second part of the question: yes, sometimes the overload will leave the input
+stream in an invalid state.  In the most common situation when we are just reading a single line or token of text from the input stream into an Str object, the istream will NOT be in an
+invalid state.  However, in the case where we are reading an istream by looping and requiring an end-of-file to stop looping, such as this:
+	vector<Str> v;
+	Str s;
+	while (cin >> s)
+	{
+		v.push_back(s);
+	}
+Then our input operator will leave the istream in an invalid state.  This is because the while loop requires that cin be in an invalid state in order to exit the loop.  
+
+This brings us to the first part of the question: "Why?".  Well it seems to me it does that in order to handle the above situation.  In the scenario above we actually want to leave the 
+istream in an invalid state in order to break out of loops such as this.  In the other case I speak about above, where we are reading a line or a single string token, we are actually
+making sure we don't leave the istream in an invalid state.  This is handled by the unget() call.  So in a way we are handling both situations in our current implementation.
+
+I messed around with this a bit, trying to add a cin.clear() to the end of the input operator overload.  But this meant an invalid state is never returned and therefore it never breaks out 
+of any loops, resulting in an infinite loop.
