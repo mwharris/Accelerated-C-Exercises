@@ -21,25 +21,16 @@
     <ClInclude Include="targetver.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Median.h">
+    <ClInclude Include="Vec.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Grade.h">
+    <ClInclude Include="Str2.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Core.h">
+    <ClInclude Include="Ptr.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Grad.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Student_Info.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="PassFail.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Audit.h">
+    <ClInclude Include="Str.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
@@ -47,28 +38,10 @@
     <ClCompile Include="stdafx.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Chap13.cpp">
+    <ClCompile Include="Question5.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Median.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Grade.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Core.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Grad.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Student_Info.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="PassFail.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Audit.cpp">
+    <ClCompile Include="Str2.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

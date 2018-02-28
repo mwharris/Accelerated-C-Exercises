@@ -18,14 +18,15 @@ public:
 	//Member functions
 	virtual std::istream& read(std::istream& in);
 	virtual double get_final_grade() const;
-	virtual std::string get_letter_grade() const;
-	
-	virtual bool valid() const { 
-		return !homework.empty(); 
-	}
+	bool valid() const { return !homework.empty(); }
 
 	//Getters and Setters
 	std::string get_name() const;
+
+	double testMe(double one)
+	{
+		return 0;
+	}
 
 protected:
 	//Member functions
@@ -34,7 +35,6 @@ protected:
 	std::istream& read_hw(std::istream& in, std::vector<double>& hw);
 	double midterm, final;
 	std::vector<double> homework;
-	std::string get_letter_grade_helper(double grade) const;
 
 private:
 	//Data members

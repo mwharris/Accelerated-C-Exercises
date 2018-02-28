@@ -19,9 +19,3 @@ double grade(double midterm, double final, const vector<double>& hw)
 {
 	return grade(midterm, final, median(hw));
 }
-
-//Calculate the average between midterm and final grades
-double grade(double midterm, double final)
-{
-	return (midterm + final) / 2;
-}

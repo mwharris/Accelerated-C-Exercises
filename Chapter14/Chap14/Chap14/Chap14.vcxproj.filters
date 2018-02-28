@@ -21,10 +21,7 @@
     <ClInclude Include="targetver.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Median.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Grade.h">
+    <ClInclude Include="Audit.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="Core.h">
@@ -33,13 +30,28 @@
     <ClInclude Include="Grad.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Student_Info.h">
+    <ClInclude Include="Grade.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Median.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="PassFail.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Audit.h">
+    <ClInclude Include="Student_Info.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Ptr.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Str.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Vec.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="RefCount.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
@@ -47,13 +59,10 @@
     <ClCompile Include="stdafx.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Chap13.cpp">
+    <ClCompile Include="Chap14.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Median.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Grade.cpp">
+    <ClCompile Include="Audit.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="Core.cpp">
@@ -62,13 +71,16 @@
     <ClCompile Include="Grad.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Student_Info.cpp">
+    <ClCompile Include="Grade.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Median.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="PassFail.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Audit.cpp">
+    <ClCompile Include="Student_Info.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

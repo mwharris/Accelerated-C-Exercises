@@ -12,42 +12,6 @@ using std::istream;
 using std::domain_error;
 using std::string;
 
-//Return the letter grade a student deserves based on number grade
-char get_letter_grade(double grade)
-{
-	if (grade >= 90)
-	{
-		return 'A';
-	}
-	else if (grade >= 80 && grade < 90)
-	{
-		return 'B';
-	}
-	else if (grade >= 70 && grade < 80)
-	{
-		return 'C';
-	}
-	else if (grade >= 60 && grade < 70)
-	{
-		return 'D';
-	}
-	else
-	{
-		return 'F';
-	}
-}
-
-//Custom comparator for Student Info objects
-bool compare(const Core& a, const Core& b)
-{
-	return a.get_final_grade() < b.get_final_grade();
-}
-//Pointer version of custom comparator
-bool compare_core_ptrs(const Core* a, const Core* b)
-{
-	return compare(*a, *b);
-}
-
 //Default constructor
 Core::Core() : midterm(0), final(0) {}
 
@@ -166,5 +130,7 @@ std::string Core::get_letter_grade_helper(double grade) const
 
 std::string Core::get_letter_grade() const
 {
-	return get_letter_grade_helper(get_final_grade());
+	double g = get_final_grade();
+	std::string letterGrade = get_letter_grade_helper(g);
+	return letterGrade;
 }

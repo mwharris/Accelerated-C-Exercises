@@ -49,12 +49,16 @@ bool compare_core_ptrs(const Core* a, const Core* b)
 }
 
 //Default constructor
-Core::Core() : midterm(0), final(0) {}
+Core::Core() : midterm(0), final(0) 
+{
+	std::cout << "Core::Core()" << std::endl;
+}
 
 //Initalizer constructor
 Core::Core(istream& in)
 {
-	read(in);
+	std::cout << "Core::Core(istream& in)" << std::endl;
+	//read(in);
 }
 
 //Destructor
@@ -107,64 +111,13 @@ istream& Core::read(istream& in)
 //Calculate the grade for this player using the values we've read
 double Core::get_final_grade() const
 {
+	std::cout << "Core::get_final_grade()" << std::endl;
 	return grade(midterm, final, homework);
 }
 
 //Getters for private and protected members
 string Core::get_name() const
 {
+	std::cout << "Core::get_name()" << std::endl;
 	return name;
-}
-
-std::string Core::get_letter_grade_helper(double grade) const
-{
-	if (grade >= 97)
-	{
-		return "A+";
-	}
-	else if (grade >= 94)
-	{
-		return "A";
-	}
-	else if (grade >= 90)
-	{
-		return "A-";
-	}
-	else if (grade >= 87)
-	{
-		return "B+";
-	}
-	else if (grade >= 84)
-	{
-		return "B";
-	}
-	else if (grade >= 80)
-	{
-		return "B-";
-	}
-	else if (grade >= 77)
-	{
-		return "C+";
-	}
-	else if (grade >= 74)
-	{
-		return "C";
-	}
-	else if (grade >= 70)
-	{
-		return "C-";
-	}
-	else if (grade >= 60)
-	{
-		return "D";
-	}
-	else
-	{
-		return "F";
-	}
-}
-
-std::string Core::get_letter_grade() const
-{
-	return get_letter_grade_helper(get_final_grade());
 }

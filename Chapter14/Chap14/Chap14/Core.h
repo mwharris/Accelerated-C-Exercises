@@ -27,9 +27,10 @@ public:
 	//Getters and Setters
 	std::string get_name() const;
 
+	virtual Core* clone() const { return new Core(*this); }
+
 protected:
 	//Member functions
-	virtual Core* clone() const { return new Core(*this); }
 	std::istream& read_common(std::istream& in);
 	std::istream& read_hw(std::istream& in, std::vector<double>& hw);
 	double midterm, final;
@@ -42,8 +43,6 @@ private:
 
 };
 
-bool compare(const Core& a, const Core& b);
-bool compare_core_ptrs(const Core* a, const Core* b);
 char get_letter_grade(double grade);
 
 #endif // !CORE_H

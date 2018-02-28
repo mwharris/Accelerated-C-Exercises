@@ -20,9 +20,9 @@
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>15.0</VCProjectVersion>
-    <ProjectGuid>{0481B59B-A46B-4821-A7F4-02BB45BE530E}</ProjectGuid>
+    <ProjectGuid>{D8EFFC53-9BD5-4692-A1CC-4084488001E8}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
-    <RootNamespace>Chap13</RootNamespace>
+    <RootNamespace>My131</RootNamespace>
     <WindowsTargetPlatformVersion>10.0.16299.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -143,30 +143,26 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClInclude Include="Audit.h" />
+    <ClInclude Include="Core.h" />
     <ClInclude Include="Grad.h" />
     <ClInclude Include="Grade.h" />
     <ClInclude Include="Median.h" />
-    <ClInclude Include="PassFail.h" />
     <ClInclude Include="stdafx.h" />
-    <ClInclude Include="Core.h" />
     <ClInclude Include="Student_Info.h" />
     <ClInclude Include="targetver.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Audit.cpp" />
-    <ClCompile Include="Chap13.cpp" />
+    <ClCompile Include="13-1.cpp" />
+    <ClCompile Include="Core.cpp" />
     <ClCompile Include="Grad.cpp" />
     <ClCompile Include="Grade.cpp" />
     <ClCompile Include="Median.cpp" />
-    <ClCompile Include="PassFail.cpp" />
     <ClCompile Include="stdafx.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
     </ClCompile>
-    <ClCompile Include="Core.cpp" />
     <ClCompile Include="Student_Info.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
